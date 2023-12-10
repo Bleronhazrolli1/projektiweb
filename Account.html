@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Hazrolli</title>
+    <link rel="stylesheet" href="Account.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale=1.00, maximum-scale=1.00, user-scalable=no">
+
+
+</head>
+<body>
+    <div class="head-haz">
+            <div class="hazrolliLogo">
+                <a href="homepage.html"><img id="hlogo" src="Images\HazLoWhite.png" alt="HazrolliLogo">
+                </a>
+                
+                
+            </div>
+            
+            <div class="head-right-side">
+                
+                <a href="shopnow.html" class="account-txt">Shop</a>
+                <a href="about-us.html" class="account-txt">About </a>
+                <a href="contact.html" class="account-txt">Contact</a>
+                <a href="Account.html" class="account-txt">Account</a>
+                <img class="cart-icon" src="Images\icons8-cart-64.png" alt="">
+            </div>
+            
+    </div>  
+    
+    <div class="form-box">
+            <img style="height: 100%;" id="form-background"src="Images\home-nike.png" alt="">
+        
+           
+        <div class="form"  onsubmit="return validateForm()">
+            <form class="login-form"  method="post">
+                 <h1 id="login-txt">Log-in</h1>
+                 
+                 
+                 <input type="text" id="usernamebox" name="username" required placeholder="Username">
+                
+                 <div class="error-message" id="usernameError"></div>
+
+
+                 
+                 <input type="password" id="passwordbox" name="password" required placeholder="Password">
+                 <div class="error-message" id="passwordError"></div>
+                 
+                 <p id="signup-link">Dont have a account, <a href="Signup.html">sign up.</a></p>
+                
+                 <input type="submit" onclick="validateForm()" value="Login">
+                 
+                
+                    <img id="profil-icon" src="Images\profil-icon.png" alt="">
+                 
+               </form>
+         </div>
+    </div>
+    <script>
+        let UsernameRegex = /^[a-zA-Z]{3,8}$/;
+        let PasswordRegex  = /^[a-zA-Z0-9]{6,16}$/;
+
+        function validateForm(){
+            let usernameInput = document.getElementById('usernamebox');
+            let usernameError = document.getElementById('usernameError');
+            let passwordInput = document.getElementById('passwordbox');
+            let passwordError = document.getElementById('passwordError');
+    
+            usernameError.innerText = '';
+            passwordError.innerText = '';
+    
+            if(!UsernameRegex.test(usernameInput.value)){
+                usernameError.innerText = 'Wrong Username!';
+                return false;
+            }
+            if(!PasswordRegex.test(passwordInput.value)){
+                passwordError.innerText = 'Wrong Password!';
+                return false ;
+            }
+    
+            alert('Log in form submitted succesfully!');
+            return true;
+        }
+        
+        </script>
+</body>
+</html>
