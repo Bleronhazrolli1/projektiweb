@@ -1,0 +1,192 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+.head-haz {
+    display: flex;
+    flex-direction: row;
+    background-color: black;  
+    height: 65px;
+    max-height: 65px;
+    justify-content: space-between;   
+    
+    
+}
+
+#hlogo{
+    width: 100px;
+    margin-left: 25px;   
+}
+
+
+
+.account-txt {
+    color: white;
+    align-self: center;
+    margin-left: 30px;
+    font-size: 12px;
+    text-decoration: none;     
+}
+
+.cart-icon {
+    width:45%;
+    height: 45%;
+    align-self: center;
+    margin-left: 30px;
+
+}
+
+.shop-txt {
+    color: white;
+    align-self: center;
+    margin-left: 30px;
+    font-size: 12px;  
+    text-decoration: none;
+}
+
+.hazrolliLogo {
+    display: flex;
+    justify-content: flex-start;   
+    width: 150px;    
+}
+.head-right-side {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    width: 250px;
+    padding-right: 25px;
+}
+
+
+.homepage-photo {
+    display: flex;
+    background-color: aquamarine;
+    position: relative;
+    
+}
+
+.home-img {
+    
+    width: 100%;
+    
+}
+
+.bottom-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 225px;
+    padding-top: 25px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+#bottom-right-part{
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.middle-pic {
+    display: flex; 
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.empty-box-l {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.282);
+    margin: 0px;
+}
+
+.img-brands {
+    width:100px;
+    align-self: center;
+}
+
+.shop-button {
+    margin-top: 200px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.547);
+    color: white;
+    border-width: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.shop-button:hover {
+    animation: ButtonAnimation 1s; 
+    background-color: #ffffff; 
+    color: black;
+    
+}
+
+@keyframes ButtonAnimation {
+    0% {
+        background-color: rgba(0, 0, 0, 0.547);
+      transform: scale(1);
+    }
+    50% {
+      background-color: #ffffff; 
+      color: rgb(0, 0, 0);
+      transform: scale(1.6);
+    }
+    100% {
+      background-color: #ffffff; 
+      color: rgb(0, 0, 0);
+      transform: scale(1);
+    }
+  }
+.shop-button-div {
+    display: flex;
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    left: 47%;
+
+}
+
+.deslogohmpg{
+    width:100px;
+
+    justify-content: center;
+}
+
+#texti{
+    position: absolute;
+    left: 33%;
+    
+    top: 20%;
+    color: white;
+    font-family: 'Old English Five', sans-serif;
+                                                
+}
+
+
+
+
+
+
+
