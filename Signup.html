@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>Hazrolli</title>
+    <link rel="stylesheet" href="Signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale=1.00, maximum-scale=1.00, user-scalable=no">
+
+
+</head>
+<body>
+    <div class="head-haz">
+            <div class="hazrolliLogo">
+                <a href="homepage.html"><img id="hlogo" src="Images\HazLoWhite.png" alt="HazrolliLogo">
+                </a>
+                
+                
+            </div>
+            
+            <div class="head-right-side">
+                
+                <a href="shopnow.html" class="account-txt">Shop</a>
+                <a href="about-us.html" class="account-txt">About </a>
+                <a href="contact.html" class="account-txt">Contact</a>
+                <a href="Account.html" class="account-txt">Account</a>
+                <img class="cart-icon" src="Images\icons8-cart-64.png" alt="">
+            </div>
+            
+    </div>  
+    
+    <div class="form-box">
+            <img id="form-background"src="Images\home-nike.png" alt="">
+
+            
+            <form class="form"  method="post" onsubmit="return validateForm()">
+                <div style="width:180px;">
+                    <h1>Sign up</h1>
+                </div>
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="lastname">Lastname:</label><br>
+                    <input type="text" id="lastname" name="lastname" required>
+                    <div class="error-message" id="lastnameError"></div>
+                </div>
+    
+                <div style="width:180px;">
+                    <label  style="font-size: 12px;" for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="phone">Phone Number:</label><br>
+                    <input type="text" id="phone" name="phone" required>
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="address">Address:</label><br>
+                    <input type="text" id="address" name="address" required>
+                    <div class="error-message" id="addressError"></div>
+                </div>
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="City">City:</label><br>
+                        <select id="city" name="City">
+                            <option value="none">none</option>
+                            <option value="Decan">Decan</option>
+                            <option value="Dragash">Dragash</option>
+                            <option value="Ferizaj">Ferizaj</option>
+                            <option value="Gjakova">Gjakova</option>
+                            <option value="Gjilan">Gjilan</option>
+                            <option value="Istog">Istog</option>
+                            <option value="Junik">Junik</option>
+                            <option value="Kamenic">Kamenic</option>
+                            <option value="Kline">Kline</option>
+                            <option value="Fushe-Kosove">Fushe-Kosove</option>
+                            <option value="Lipjan">Lipjan</option>
+                            <option value="Malisheva">Malisheva</option>
+                            <option value="Mitrovic">Mitrovic</option>
+                            <option value="Obilic">Obilic</option>
+                            <option value="Peja">Peja</option>
+                            <option value="Prizren">Prizren</option>
+                            <option value="Rahovec">Rahovec</option>
+                            <option value="Shtime">Shtime</option>
+                            <option value="Skenderaj">Skenderaj</option>
+                            <option value="Suhareke">Suhareke</option>
+                            <option value="Viti">Viti</option>
+                            <option value="Vushtri">Vushtri</option>
+        
+                        </select>
+                </div>
+                
+                
+                
+                
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" required> 
+                    <div class="error-message" id="emailError"></div>
+                </div>
+        
+                <div style="width:180px;">
+                    <label style="font-size: 12px;" for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <p id="signup-link">You alredy have a account, <a href="Account.html">Log in.</a></p>
+                
+                <div class="signup-button">
+                    <input type="submit" onclick="validateForm()" value="Sign Up">
+                </div>
+               
+               
+               
+               <script>
+                let NameRegex = /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/;
+                let LastnameRegex = /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/;
+                let UsernameRegex = /^[a-zA-Z]{3,8}$/;
+                let PhoneRegex = /^\+?[1-9][0-9]{7,14}$/
+                let AddressRegex = /^[a-zA-Z\s]+$/
+                let EmailRegex = /^\S+@\S+\.\S+$/;
+                let PasswordRegex  = /^[a-zA-Z0-9]{6,16}$/;
+
+                function validateForm() {
+    let nameInput = document.getElementById('name');
+    let nameError = document.getElementById('nameError');
+
+    let lastnameInput = document.getElementById('lastname');
+    let lastnameError = document.getElementById('lastnameError');
+
+    let usernameInput = document.getElementById('username');
+    let usernameError = document.getElementById('usernameError');
+
+    let phoneInput = document.getElementById('phone');
+    let phoneError = document.getElementById('phoneError');
+
+    let addressInput = document.getElementById('address');
+    let addressError = document.getElementById('addressError');
+
+    let emailInput = document.getElementById('email');
+    let emailError = document.getElementById('emailError');
+
+    let passwordInput = document.getElementById('password');
+    let passwordError = document.getElementById('passwordError');
+
+    
+    nameError.innerText = '';
+    lastnameError.innerText = '';
+    usernameError.innerText = '';
+    phoneError.innerText = '';
+    addressError.innerText = '';
+    emailError.innerText = '';
+    passwordError.innerText = '';
+
+    if (!NameRegex.test(nameInput.value)) {
+        nameError.innerText = 'Please enter a valid name.';
+        return false;
+    }
+    if (!LastnameRegex.test(lastnameInput.value)) {
+        lastnameError.innerText = 'Please enter a valid last name.';
+        return false;
+    }
+    if (!UsernameRegex.test(usernameInput.value)) {
+        usernameError.innerText = 'Please enter a valid username.';
+        return false;
+    }
+    if (!PhoneRegex.test(phoneInput.value)) {
+        phoneError.innerText = 'Please enter a valid phone number.';
+        return false;
+    }
+    if (!AddressRegex.test(addressInput.value)) {
+        addressError.innerText = 'Please enter a valid address.';
+        return false;
+    }
+    if (!EmailRegex.test(emailInput.value)) {
+        emailError.innerText = 'Please enter a valid email address.';
+        return false;
+    }
+    if (!PasswordRegex.test(passwordInput.value)) {
+        passwordError.innerText = 'Please enter a valid password.';
+        return false;
+    }
+
+    alert('Sign up form submitted successfully!');
+    return true;
+        }
+
+
+                </script>
+
+                <img id="profil-icon" src="Images\profil-icon.png" alt="">
+
+               
+                
+              </form>
+        
+    </div>
+</body>
+</html>
